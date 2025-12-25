@@ -5,126 +5,128 @@
 <title>Merry Christmas 🎄</title>
 
 <style>
-    body {
-        margin: 0;
-        background: #00111a;
-        font-family: "Segoe UI", sans-serif;
-        color: white;
-        height: 100vh;
-        overflow: hidden;
-        text-align: center;
-    }
+body {
+    margin: 0;
+    background: #00111a;
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
 
-    h1 {
-        margin-top: 20px;
-        color: gold;
-        text-shadow: 0 0 10px gold;
-    }
+h1 {
+    margin-top: 20px;
+    color: gold;
+    text-shadow: 0 0 10px gold;
+}
 
-    #hint {
-        margin-top: 5px;
-        font-size: 18px;
-        color: #ffd6e7;
-        animation: blinkHint 1.2s infinite;
-    }
+#hint {
+    margin-top: 5px;
+    font-size: 18px;
+    color: #ffd6e7;
+    animation: blinkHint 1.2s infinite;
+}
 
-    @keyframes blinkHint {
-        0% { opacity: 0.3; }
-        100% { opacity: 1; }
-    }
+@keyframes blinkHint {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
 
-    .tree-wrapper {
-        position: relative;
-        width: 100%;
-        margin-top: 40px;
-    }
+/* ẢNH 2 BÊN */
+.side-img {
+    position: fixed;
+    bottom: 40px;
+    width: 150px;
+    animation: float 3s ease-in-out infinite;
+}
 
-    .side-img {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 160px;
-    }
+.left-img {
+    left: 20px;
+}
 
-    .left-img {
-        left: 40px;
-    }
+.right-img {
+    right: 20px;
+}
 
-    .right-img {
-        right: 40px;
-    }
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
 
-    .tree-container {
-        cursor: pointer;
-    }
+.tree-container {
+    margin-top: 40px;
+    cursor: pointer;
+}
 
-    .tree {
-        position: relative;
-        width: 260px;
-        margin: auto;
-    }
+.tree {
+    position: relative;
+    width: 260px;
+    margin: auto;
+}
 
-    .layer {
-        width: 0;
-        height: 0;
-        border-left: 130px solid transparent;
-        border-right: 130px solid transparent;
-        border-bottom: 100px solid #1faa59;
-        margin: auto;
-        opacity: 0;
-        animation: grow 0.6s forwards;
-    }
+.layer {
+    width: 0;
+    height: 0;
+    border-left: 130px solid transparent;
+    border-right: 130px solid transparent;
+    border-bottom: 100px solid #1faa59;
+    margin: auto;
+    opacity: 0;
+    animation: grow 0.6s forwards;
+}
 
-    .layer:nth-child(1) { animation-delay: 0.2s; }
-    .layer:nth-child(2) { margin-top: -20px; animation-delay: 0.4s; }
-    .layer:nth-child(3) { margin-top: -20px; animation-delay: 0.6s; }
+.layer:nth-child(1) { animation-delay: 0.2s; }
+.layer:nth-child(2) { margin-top: -20px; animation-delay: 0.4s; }
+.layer:nth-child(3) { margin-top: -20px; animation-delay: 0.6s; }
 
-    @keyframes grow {
-        from { transform: translateY(-30px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
+@keyframes grow {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
 
-    .trunk {
-        width: 50px;
-        height: 60px;
-        background: #6b3e26;
-        margin: 0 auto;
-        border-radius: 6px;
-    }
+.trunk {
+    width: 50px;
+    height: 60px;
+    background: #6b3e26;
+    margin: 0 auto;
+    border-radius: 6px;
+}
 
-    .ornament {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        position: absolute;
-        animation: blink 1.5s infinite alternate;
-    }
+.ornament {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    animation: blink 1.5s infinite alternate;
+}
 
-    @keyframes blink {
-        from { opacity: 0.3; }
-        to { opacity: 1; }
-    }
+@keyframes blink {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
 
-    .snow {
-        position: fixed;
-        top: -10px;
-        color: white;
-        font-size: 18px;
-        animation: fall linear infinite;
-    }
+.snow {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 18px;
+    animation: fall linear infinite;
+}
 
-    @keyframes fall {
-        to { transform: translateY(110vh); }
-    }
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
 
-    #message {
-        margin-top: 25px;
-        font-size: 28px;
-        color: pink;
-        text-shadow: 0 0 10px pink;
-        opacity: 0;
-        transition: 1s;
-    }
+#message {
+    margin-top: 25px;
+    font-size: 28px;
+    color: pink;
+    text-shadow: 0 0 10px pink;
+    opacity: 0;
+    transition: 1s;
+}
 </style>
 </head>
 
@@ -133,35 +135,29 @@
 <h1>🎄 Merry Christmas 🎄</h1>
 <p id="hint">💡 Bấm vào cây thông nhé 🎄</p>
 
-<div class="tree-wrapper">
+<!-- ẢNH -->
+<img src="./left.png" class="side-img left-img">
+<img src="./right.png" class="side-img right-img">
 
-    <!-- Ảnh bên trái -->
-    <img src="left.png" class="side-img left-img">
+<div class="tree-container" onclick="showLove()">
+    <div class="tree">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
 
-    <!-- Cây thông -->
-    <div class="tree-container" onclick="showLove()">
-        <div class="tree">
-            <div class="layer"></div>
-            <div class="layer"></div>
-            <div class="layer"></div>
-
-            <div class="ornament" style="top:60px; left:90px; background:red;"></div>
-            <div class="ornament" style="top:110px; left:140px; background:yellow;"></div>
-            <div class="ornament" style="top:160px; left:70px; background:cyan;"></div>
-        </div>
-        <div class="trunk"></div>
+        <div class="ornament" style="top:60px; left:90px; background:red;"></div>
+        <div class="ornament" style="top:110px; left:140px; background:yellow;"></div>
+        <div class="ornament" style="top:160px; left:70px; background:cyan;"></div>
     </div>
 
-    <!-- Ảnh bên phải -->
-    <img src="right.png" class="side-img right-img">
-
+    <div class="trunk"></div>
 </div>
 
 <div id="message">💖 Em bé của anh, Giáng Sinh vui vẻ 🎄❤️</div>
 
-<!-- Nhạc -->
+<!-- NHẠC -->
 <audio id="bgm" loop>
-    <source src="music.mp3" type="audio/mpeg">
+    <source src="./music.mp3" type="audio/mpeg">
 </audio>
 
 <script>
@@ -194,3 +190,4 @@ setInterval(snow, 200);
 
 </body>
 </html>
+
