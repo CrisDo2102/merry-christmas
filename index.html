@@ -44,7 +44,6 @@
         margin: auto;
     }
 
-    /* TÁN CÂY */
     .layer {
         width: 0;
         height: 0;
@@ -65,7 +64,6 @@
         to { transform: translateY(0); opacity: 1; }
     }
 
-    /* GỐC CÂY */
     .trunk {
         width: 50px;
         height: 60px;
@@ -74,7 +72,6 @@
         border-radius: 6px;
     }
 
-    /* ĐÈN */
     .ornament {
         width: 12px;
         height: 12px;
@@ -88,7 +85,6 @@
         to { opacity: 1; }
     }
 
-    /* TUYẾT */
     .snow {
         position: fixed;
         top: -10px;
@@ -134,10 +130,22 @@
 
 <div id="message">💖 Em bé của anh, Giáng Sinh vui vẻ 🎄❤️</div>
 
+<!-- NHẠC -->
+<audio id="bgm" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
 <script>
+let played = false;
+
 function showLove() {
     document.getElementById("message").style.opacity = 1;
     document.getElementById("hint").style.display = "none";
+
+    if (!played) {
+        document.getElementById("bgm").play();
+        played = true;
+    }
 }
 
 function snow() {
