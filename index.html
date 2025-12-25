@@ -33,6 +33,28 @@
         100% { opacity: 1; }
     }
 
+    /* ẢNH HAI BÊN */
+    .side-image {
+        position: absolute;
+        top: 180px;
+        width: 120px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .left-img {
+        left: 5%;
+    }
+
+    .right-img {
+        right: 5%;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+
     .tree-container {
         margin-top: 40px;
         cursor: pointer;
@@ -112,6 +134,10 @@
 
 <h1>🎄 Merry Christmas 🎄</h1>
 <p id="hint">💡 Bé bấm vào cây thông nhé 🎄</p>
+
+<!-- ẢNH HAI BÊN -->
+<img src="left.png" class="side-image left-img">
+<img src="right.png" class="side-image right-img">
 
 <div class="tree-container" onclick="showLove()">
 
