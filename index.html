@@ -33,30 +33,28 @@
         100% { opacity: 1; }
     }
 
-    /* ẢNH HAI BÊN */
-    .side-image {
+    .tree-wrapper {
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .side-img {
         position: absolute;
-        top: 180px;
-        width: 120px;
-        animation: float 3s ease-in-out infinite;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 160px;
     }
 
     .left-img {
-        left: 5%;
+        left: 40px;
     }
 
     .right-img {
-        right: 5%;
-    }
-
-    @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0); }
+        right: 40px;
     }
 
     .tree-container {
-        margin-top: 40px;
         cursor: pointer;
     }
 
@@ -133,31 +131,36 @@
 <body>
 
 <h1>🎄 Merry Christmas 🎄</h1>
-<p id="hint">💡 Bé bấm vào cây thông nhé 🎄</p>
+<p id="hint">💡 Bấm vào cây thông nhé 🎄</p>
 
-<!-- ẢNH HAI BÊN -->
-<img src="left.png" class="side-image left-img">
-<img src="right.png" class="side-image right-img">
+<div class="tree-wrapper">
 
-<div class="tree-container" onclick="showLove()">
+    <!-- Ảnh bên trái -->
+    <img src="left.png" class="side-img left-img">
 
-    <div class="tree">
-        <div class="layer"></div>
-        <div class="layer"></div>
-        <div class="layer"></div>
+    <!-- Cây thông -->
+    <div class="tree-container" onclick="showLove()">
+        <div class="tree">
+            <div class="layer"></div>
+            <div class="layer"></div>
+            <div class="layer"></div>
 
-        <div class="ornament" style="top:60px; left:90px; background:red;"></div>
-        <div class="ornament" style="top:110px; left:140px; background:yellow;"></div>
-        <div class="ornament" style="top:160px; left:70px; background:cyan;"></div>
+            <div class="ornament" style="top:60px; left:90px; background:red;"></div>
+            <div class="ornament" style="top:110px; left:140px; background:yellow;"></div>
+            <div class="ornament" style="top:160px; left:70px; background:cyan;"></div>
+        </div>
+        <div class="trunk"></div>
     </div>
 
-    <div class="trunk"></div>
+    <!-- Ảnh bên phải -->
+    <img src="right.png" class="side-img right-img">
+
 </div>
 
 <div id="message">💖 Em bé của anh, Giáng Sinh vui vẻ 🎄❤️</div>
 
-<!-- NHẠC -->
-<audio id="bgm" loop preload="auto">
+<!-- Nhạc -->
+<audio id="bgm" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
